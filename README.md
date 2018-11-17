@@ -1,7 +1,7 @@
 # final-project-final-ios-wuwen
-final-project-final-ios-wuwen created by GitHub Classroom
-jmw2vr: Justine Wen
-yw6fy: Anna Wu
+final-project-final-ios-wuwen created by GitHub Classroom <br/>
+jmw2vr: Justine Wen <br/>
+yw6fy: Anna Wu <br/>
 
 ## Progress Made for Milestone:
 So far we have set up the first 3-4 view controllers of our application. Our main focus for this milestone was to get the login and 
