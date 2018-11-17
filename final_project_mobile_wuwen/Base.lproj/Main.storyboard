@@ -172,7 +172,7 @@
                                 <rect key="frame" x="140" y="529" width="90" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91569064919999998" green="0.90791858309999995" blue="0.97926788470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Next &gt;"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButtonTapped:" destination="AmV-og-cXf" eventType="touchUpInside" id="zWg-pX-bCU"/>
                                 </connections>
