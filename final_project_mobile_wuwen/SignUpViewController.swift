@@ -18,6 +18,9 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        self.title = "Sign Up"
+//        tableView.delegate = self
+//        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     

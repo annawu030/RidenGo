@@ -12,13 +12,13 @@
 		C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */; };
 		C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E381219A5D32005CD72D /* AppDelegate.swift */; };
 		C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E383219A5D32005CD72D /* ViewController.swift */; };
-		C4E5E387219A5D32005CD72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E385219A5D32005CD72D /* Main.storyboard */; };
 		C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */; };
 		C4E5E397219A5D34005CD72D /* final_project_mobile_wuwenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E396219A5D34005CD72D /* final_project_mobile_wuwenTests.swift */; };
 		C4E5E3A2219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */; };
-		C4E5E3C6219C96EC005CD72D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */; };
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
+		DCA879C6219FD0AE00C1F473 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */; };
+		DCA879C8219FD0D700C1F473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C7219FD0D700C1F473 /* Main.storyboard */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,6 @@
 		C4E5E37E219A5D32005CD72D /* final_project_mobile_wuwen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = final_project_mobile_wuwen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E381219A5D32005CD72D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E5E383219A5D32005CD72D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4E5E386219A5D32005CD72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E5E38B219A5D33005CD72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4E5E38D219A5D33005CD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E5E392219A5D33005CD72D /* final_project_mobile_wuwenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = final_project_mobile_wuwenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +59,11 @@
 		C4E5E39D219A5D34005CD72D /* final_project_mobile_wuwenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = final_project_mobile_wuwenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = final_project_mobile_wuwenUITests.swift; sourceTree = "<group>"; };
 		C4E5E3A3219A5D34005CD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPageViewController.swift; path = ../../../MainPageViewController.swift; sourceTree = "<group>"; };
+		DCA879C7219FD0D700C1F473 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,13 +144,13 @@
 			isa = PBXGroup;
 			children = (
 				C4E5E381219A5D32005CD72D /* AppDelegate.swift */,
-				C4E5E385219A5D32005CD72D /* Main.storyboard */,
+				DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */,
 				C4E5E383219A5D32005CD72D /* ViewController.swift */,
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
+				DCA879C7219FD0D700C1F473 /* Main.storyboard */,
 				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
-				C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
 			);
 			path = final_project_mobile_wuwen;
@@ -282,8 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA879C8219FD0D700C1F473 /* Main.storyboard in Resources */,
 				C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */,
-				C4E5E387219A5D32005CD72D /* Main.storyboard in Resources */,
 				DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,9 +405,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
-				C4E5E3C6219C96EC005CD72D /* MainPageViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
+				DCA879C6219FD0AE00C1F473 /* MainPageViewController.swift in Sources */,
 				C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,14 +444,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C4E5E385219A5D32005CD72D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4E5E386219A5D32005CD72D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
