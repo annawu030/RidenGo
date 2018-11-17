@@ -18,9 +18,7 @@
 		C4E5E3A2219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */; };
 		C4E5E3C6219C96EC005CD72D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */; };
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
-		DCA879BE219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879BD219FB4BD00C1F473 /* GoogleService-Info.plist */; };
-		DCA879BF219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879BD219FB4BD00C1F473 /* GoogleService-Info.plist */; };
-		DCA879C0219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879BD219FB4BD00C1F473 /* GoogleService-Info.plist */; };
+		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +63,7 @@
 		C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCA879BD219FB4BD00C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,7 +147,7 @@
 				C4E5E385219A5D32005CD72D /* Main.storyboard */,
 				C4E5E383219A5D32005CD72D /* ViewController.swift */,
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
-				DCA879BD219FB4BD00C1F473 /* GoogleService-Info.plist */,
+				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
 				C4E5E3C5219C96EC005CD72D /* MainPageViewController.swift */,
@@ -286,7 +284,7 @@
 			files = (
 				C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */,
 				C4E5E387219A5D32005CD72D /* Main.storyboard in Resources */,
-				DCA879BE219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */,
+				DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA879BF219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA879C0219FB4BD00C1F473 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
