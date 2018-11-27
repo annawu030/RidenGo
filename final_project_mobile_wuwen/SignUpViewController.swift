@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-
-    @IBOutlet weak var UVAEmailTextField: UITextField!
+    var computingID:String?
+    var password:String?
+    @IBOutlet weak var ComputingIDTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordReentryTextField: UITextField!
     override func viewDidLoad() {
@@ -30,9 +31,9 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender:UIButton){
-        if UVAEmailTextField.text != "" {
+        if ComputingIDTextField.text != "" {
             if(passwordTextField.text == passwordReentryTextField.text){
-                if let computingID = UVAEmailTextField.text, let pass = passwordTextField.text{
+                if let computingID = ComputingIDTextField.text, let pass = passwordTextField.text{
                     //Register the user with Firebase
                     print("hello what the heck is happeningnksdjnglkjnglkjfngkljdfng")
                         Auth.auth().createUser(withEmail: computingID + "@virginia.edu", password: pass, completion:  { (user,error) in
@@ -42,9 +43,15 @@ class SignUpViewController: UIViewController {
                             {print("Error when sending Email verification is \(error)")}
                         }
                         if let u = user{
-
+                            if (Auth.auth().currentUser?.isEmailVerified)!{
                             //User is found, go to the next page you want the user to go to
-                            self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
+                                self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
+                            }
+                            else{
+                                self.computingID = self.ComputingIDTextField.text
+                                self.password = self.passwordTextField.text
+                                self.performSegue(withIdentifier: "VerifyEmailSegue", sender: self)
+                            }
                         }
                         else{
                             //Error:check error and show message

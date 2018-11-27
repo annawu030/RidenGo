@@ -19,6 +19,7 @@
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
 		DCA879CA21ACD86E00C1F473 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */; };
 		DCA879CC21ACD89D00C1F473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA879CB21ACD89D00C1F473 /* Main.storyboard */; };
+		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DCA879CB21ACD89D00C1F473 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
+				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
 			);
 			path = final_project_mobile_wuwen;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
+				DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */,
 				C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
