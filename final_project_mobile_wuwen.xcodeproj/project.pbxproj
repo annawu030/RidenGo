@@ -152,9 +152,9 @@
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
 				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
+				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
-				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
 			);
 			path = final_project_mobile_wuwen;
 			sourceTree = "<group>";

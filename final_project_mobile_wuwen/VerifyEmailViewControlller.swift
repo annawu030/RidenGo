@@ -18,13 +18,23 @@ class VerifyEmailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool)  {
-        super.viewDidAppear(animated)
+//    override func viewDidAppear(_ animated: Bool)  {
+//        super.viewDidAppear(animated)
+//        Auth.auth().currentUser?.reload()
+//        print(Auth.auth().currentUser?.isEmailVerified)
+//        if (Auth.auth().currentUser?.isEmailVerified)!{
+//            self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
+//        }
+//    }
+    
+    @IBAction func verifiedButtonTapped(sender:UIButton) {
         Auth.auth().currentUser?.reload()
+        print(Auth.auth().currentUser?.isEmailVerified)
         if (Auth.auth().currentUser?.isEmailVerified)!{
             self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
         }
     }
+
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if (segue.identifier == "VerifyEmailSegue"){

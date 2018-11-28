@@ -179,16 +179,24 @@
             </objects>
             <point key="canvasLocation" x="1860" y="-174.06296851574214"/>
         </scene>
-        <!--Verify Email View Controlller-->
+        <!--Verify Email View Controller-->
         <scene sceneID="Mtx-mv-Bmr">
             <objects>
-                <viewController id="fhL-zc-uTW" customClass="VerifyEmailViewControlller" sceneMemberID="viewController">
+                <viewController id="fhL-zc-uTW" customClass="VerifyEmailViewController" customModule="final_project_mobile_wuwen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lcg-nJ-3lB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1F-5u-jfh">
+                                <rect key="frame" x="161" y="357" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Verified"/>
+                                <connections>
+                                    <action selector="verifiedButtonTappedWithSender:" destination="fhL-zc-uTW" eventType="touchUpInside" id="tM3-iS-ahl"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please verify your identity through your UVA email before going further" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmC-k2-eCY">
-                                <rect key="frame" x="72" y="263" width="230" height="140"/>
+                                <rect key="frame" x="72" y="264" width="230" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -198,6 +206,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TRq-Vx-hwX"/>
                     </view>
+                    <connections>
+                        <segue destination="M25-sA-P6u" kind="show" identifier="SignUpPagetoPersonalInfoSegue" id="F7E-Fa-NwV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCm-ab-glE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -389,4 +400,7 @@
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="F7E-Fa-NwV"/>
+    </inferredMetricsTieBreakers>
 </document>
