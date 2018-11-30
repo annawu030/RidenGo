@@ -12,13 +12,11 @@ import UIKit
 import MobileCoreServices
 import Firebase
 //import FirebaseDatabase
-
 class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var ref: DatabaseReference!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var phoneNumField: UITextField!
-    
     
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
@@ -146,12 +144,12 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     
     @IBAction func verifiedButtonTapped(sender:UIButton) {
         let user = Auth.auth().currentUser
-//        print(user)
+        //        print(user)
         let ref = Database.database().reference()
         let storageRef = Storage.storage().reference()
         
         if let user = user {
-//            let imageUrlString: String = (imageUrl?.path)!
+            //            let imageUrlString: String = (imageUrl?.path)!
             let localFile = photoURL
             let userRef = storageRef.child("profile_pictures/\(user.uid).jpg")
             let uploadTask = userRef.putFile(from: localFile! as URL, metadata: nil) { metadata, error in
@@ -189,4 +187,3 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         }
     }
 }
-
