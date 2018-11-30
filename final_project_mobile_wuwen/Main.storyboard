@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fKh-Gl-FSa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fKh-Gl-FSa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -206,13 +206,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TRq-Vx-hwX"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="M25-sA-P6u" kind="show" identifier="SignUpPagetoPersonalInfoSegue" id="F7E-Fa-NwV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCm-ab-glE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773.5999999999999" y="554.57271364317842"/>
+            <point key="canvasLocation" x="2817" y="555"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="rCC-pU-59r">
@@ -287,6 +288,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Must be longer than 8 characters.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxF-0S-dbv">
+                                <rect key="frame" x="128" y="356" width="201" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SdO-0M-tWw"/>
@@ -298,7 +306,6 @@
                         <outlet property="mobilePhoneTextField" destination="mS6-oG-5G1" id="Mgn-9P-ISh"/>
                         <outlet property="passwordReentryTextField" destination="BdU-jS-ROh" id="ZqP-of-iKN"/>
                         <outlet property="passwordTextField" destination="44L-Sy-585" id="glF-jY-T4c"/>
-                        <segue destination="M25-sA-P6u" kind="show" identifier="SignUpPagetoPersonalInfoSegue" id="39B-8a-Smk"/>
                         <segue destination="fhL-zc-uTW" kind="show" identifier="VerifyEmailSegue" id="nfc-LQ-Tuc"/>
                     </connections>
                 </viewController>
@@ -426,7 +433,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="F7E-Fa-NwV"/>
-        <segue reference="8uq-C4-gOK"/>
+        <segue reference="2X6-h4-olF"/>
     </inferredMetricsTieBreakers>
 </document>
