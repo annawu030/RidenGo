@@ -4,16 +4,25 @@
 //
 //  Created by Justine Wen on 11/14/18.
 //  Copyright © 2018 final-wuwen. All rights reserved.
-//
+///////////////////////////////////////////////////////////
+//https://stackoverflow.com/questions/38046663/where-do-i-add-the-database-reference-from-firebase-on-ios
+//https://firebase.google.com/docs/database/ios/read-and-write
 
 import UIKit
 import MobileCoreServices
+import Firebase
+//import FirebaseDatabase
 
 class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var ref: DatabaseReference!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var phoneNumField: UITextField!
+    
     
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
-    
+    var imageUrl: NSURL?
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
@@ -42,6 +51,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(PersonalInfoViewControlller.image(image:didFinishSavingWithError:contextInfo:)), nil)
             }
         }
+        imageUrl = (info[UIImagePickerController.InfoKey.referenceURL] as! NSURL)
     }
     
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -83,8 +93,6 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
             self.present(imagePicker, animated: true,
                          completion: nil)
             newMedia = false
-            
-            
         }
     }
     
@@ -94,7 +102,10 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PersonalInfoViewControlller.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        
     }
+    
+    
     
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -104,7 +115,28 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         super.didReceiveMemoryWarning()
     }
     
-    
-    
+    @IBAction func verifiedButtonTapped(sender:UIButton) {
+        let user = Auth.auth().currentUser
+        print("IIIIIIIAMMMMMHEEEEEEEERELOOOOOOKATMEEEEEE")
+        print(user)
+        let ref = Database.database().reference()
+        let imageUrlString: String = imageUrl!.absoluteString!
+        if let user = user {
+            let userObject = [
+                "first name": firstNameTextField.text!,
+                "last name": lastNameTextField.text!,
+                "phone number": phoneNumField.text!,
+                "profile picture" : imageUrlString,
+                ] as [String:Any]
+            ref.child("users").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
+                if error == nil {
+                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
+                    
+                } else {
+                    // Handle the error
+                }
+            })
+        }
+    }
 }
 

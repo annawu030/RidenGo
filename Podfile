@@ -9,6 +9,8 @@ target 'final_project_mobile_wuwen' do
   # Pods for final_project_mobile_wuwen
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   
   target 'final_project_mobile_wuwenTests' do
     inherit! :search_paths

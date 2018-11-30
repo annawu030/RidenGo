@@ -28,11 +28,15 @@ class VerifyEmailViewController: UIViewController {
 //    }
     
     @IBAction func verifiedButtonTapped(sender:UIButton) {
-        Auth.auth().currentUser?.reload()
-        print(Auth.auth().currentUser?.isEmailVerified)
-        if (Auth.auth().currentUser?.isEmailVerified)!{
-            self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
-        }
+        Auth.auth().currentUser?.reload(completion: { (err) in
+            if err == nil{
+                if (Auth.auth().currentUser?.isEmailVerified)!{
+                    self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
+                }
+            } else {
+                print("Not verified")
+            }
+        })
     }
 
     
