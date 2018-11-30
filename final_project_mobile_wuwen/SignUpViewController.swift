@@ -43,15 +43,15 @@ class SignUpViewController: UIViewController {
                             {print("Error when sending Email verification is \(error)")}
                         }
                         if let u = user{
-                            if (Auth.auth().currentUser?.isEmailVerified)!{
+//                            if (Auth.auth().currentUser?.isEmailVerified)!{
                             //User is found, go to the next page you want the user to go to
                                 self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
-                            }
-                            else{
-                                self.computingID = self.ComputingIDTextField.text
-                                self.password = self.passwordTextField.text
-                                self.performSegue(withIdentifier: "VerifyEmailSegue", sender: self)
-                            }
+//                            }
+//                            else{
+//                                self.computingID = self.ComputingIDTextField.text
+//                                self.password = self.passwordTextField.text
+//                                self.performSegue(withIdentifier: "VerifyEmailSegue", sender: self)
+//                            }
                         }
                         else{
                             //Error:check error and show message

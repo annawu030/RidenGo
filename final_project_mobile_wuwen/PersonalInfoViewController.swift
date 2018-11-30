@@ -22,7 +22,8 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
-    var imageUrl: NSURL?
+    var photoURL: NSURL?
+    var finalImageUrl: String?
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
@@ -42,6 +43,20 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     
     func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? NSURL
+        let imageName = imageUrl!.lastPathComponent
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let localPath = (documentDirectory as NSString).appendingPathComponent(imageName!)
+        print("IIIIIIIAMMMMMHEEEEEEEERELOOOOOOKATMEEEEEE")
+        print(localPath)
+        //        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        //        let data = image.pngData()
+        //        data.writeToFile(localPath, atomically: true)
+        //
+        //        let imageData = NSData(contentsOfFile: localPath)!
+        photoURL = NSURL(fileURLWithPath: localPath)
+        
         self.dismiss(animated: true, completion: nil)
         if mediaType.isEqual(to: kUTTypeImage as String) {
             let image = info[UIImagePickerController.InfoKey.originalImage]
@@ -51,7 +66,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(PersonalInfoViewControlller.image(image:didFinishSavingWithError:contextInfo:)), nil)
             }
         }
-        imageUrl = (info[UIImagePickerController.InfoKey.referenceURL] as! NSURL)
+        
     }
     
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -70,6 +85,20 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
                          completion: nil)
             newMedia = true
             func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                /////////////////////////////////////////////////////////////////////////////////////////////
+                let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? NSURL
+                let imageName = imageUrl!.lastPathComponent
+                let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+                let localPath = (documentDirectory as NSString).appendingPathComponent(imageName!)
+                print("IIIIIIIAMMMMMHEEEEEEEERELOOOOOOKATMEEEEEE")
+                print(localPath)
+                //        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+                //        let data = image.pngData()
+                //        data.writeToFile(localPath, atomically: true)
+                //
+                //        let imageData = NSData(contentsOfFile: localPath)!
+                photoURL = NSURL(fileURLWithPath: localPath)
+                /////////////////////////////////////////////////////////////////////////////////////////////
                 imagePicker.dismiss(animated: true, completion: nil)
                 guard imageView.image == info[.originalImage] as? UIImage else {
                     fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
@@ -117,16 +146,37 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     
     @IBAction func verifiedButtonTapped(sender:UIButton) {
         let user = Auth.auth().currentUser
-        print("IIIIIIIAMMMMMHEEEEEEEERELOOOOOOKATMEEEEEE")
-        print(user)
+//        print(user)
         let ref = Database.database().reference()
-        let imageUrlString: String = imageUrl!.absoluteString!
+        let storageRef = Storage.storage().reference()
+        
         if let user = user {
+//            let imageUrlString: String = (imageUrl?.path)!
+            let localFile = photoURL
+            let userRef = storageRef.child("profile_pictures/\(user.uid).jpg")
+            let uploadTask = userRef.putFile(from: localFile! as URL, metadata: nil) { metadata, error in
+                guard let metadata = metadata else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+                // Metadata contains file metadata such as size, content-type.
+                let size = metadata.size
+                // You can also access to download URL after upload.
+                storageRef.downloadURL { (url, error) in
+                    if let url=url {
+                        // Get the download URL
+                        self.finalImageUrl = url.absoluteString
+                    }
+                    else{
+                        //error
+                    }
+                }
+            }
             let userObject = [
                 "first name": firstNameTextField.text!,
                 "last name": lastNameTextField.text!,
                 "phone number": phoneNumField.text!,
-                "profile picture" : imageUrlString,
+                "profile picture" : finalImageUrl!,
                 ] as [String:Any]
             ref.child("users").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                 if error == nil {
