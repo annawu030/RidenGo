@@ -5,7 +5,6 @@
 //  Created by Justine Wen on 11/14/18.
 //  Copyright © 2018 final-wuwen. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
@@ -20,8 +19,8 @@ class SignUpViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.title = "Sign Up"
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        //        tableView.delegate = self
+        //        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -32,39 +31,12 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(_ sender:UIButton){
         if ComputingIDTextField.text != "" {
-<<<<<<< HEAD
-            if(passwordTextField.text == passwordReentryTextField.text){
-                if let computingID = ComputingIDTextField.text, let pass = passwordTextField.text{
-                    //Register the user with Firebase
-                    print("hello what the heck is happeningnksdjnglkjnglkjfngkljdfng")
-                        Auth.auth().createUser(withEmail: computingID + "@virginia.edu", password: pass, completion:  { (user,error) in
-                        //Check that user isn't nil
-                        Auth.auth().currentUser?.sendEmailVerification { (error) in
-                            if let error = error
-                            {print("Error when sending Email verification is \(error)")}
-                        }
-                        if let u = user{
-//                            if (Auth.auth().currentUser?.isEmailVerified)!{
-                            //User is found, go to the next page you want the user to go to
-                                self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
-//                            }
-//                            else{
-//                                self.computingID = self.ComputingIDTextField.text
-//                                self.password = self.passwordTextField.text
-//                                self.performSegue(withIdentifier: "VerifyEmailSegue", sender: self)
-//                            }
-                        }
-                        else{
-                            //Error:check error and show message
-                        }
-                    })
-=======
-           if(passwordTextField.text!.count >= 8){
+            if(passwordTextField.text!.count >= 8){
                 if(passwordTextField.text == passwordReentryTextField.text){
                     if let computingID = ComputingIDTextField.text, let pass = passwordTextField.text{
                         //Register the user with Firebase
                         print("hello what the heck is happeningnksdjnglkjnglkjfngkljdfng")
-                            Auth.auth().createUser(withEmail: computingID + "@virginia.edu", password: pass, completion:  { (user,error) in
+                        Auth.auth().createUser(withEmail: computingID + "@virginia.edu", password: pass, completion:  { (user,error) in
                             //Check that user isn't nil
                             Auth.auth().currentUser?.sendEmailVerification { (error) in
                                 if let error = error
@@ -72,7 +44,7 @@ class SignUpViewController: UIViewController {
                             }
                             if let u = user{
                                 if (Auth.auth().currentUser?.isEmailVerified)!{
-                                //User is found, go to the next page you want the user to go to
+                                    //User is found, go to the next page you want the user to go to
                                     self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
                                 }
                                 else{
@@ -95,15 +67,14 @@ class SignUpViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     
                     self.present(alert, animated: true)
->>>>>>> 5effc4a016ffee5902d0470783c772499b48acb4
                 }
             }
-            //password needs to be longer than 8 or else error
-           else{
+                //password needs to be longer than 8 or else error
+            else{
                 let alert = UIAlertController(title: "Password Length", message: "Please create a password that is longer than 8 characters.", preferredStyle: .alert)
-            
+                
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
+                
                 self.present(alert, animated: true)
             }
         }
@@ -118,4 +89,3 @@ class SignUpViewController: UIViewController {
     }
     
 }
-
