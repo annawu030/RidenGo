@@ -21,7 +21,6 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
     var photoURL: NSURL?
-    var finalImageUrl: String?
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
@@ -100,6 +99,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PersonalInfoViewControlller.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
         
     }
@@ -122,36 +122,47 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         let user = Auth.auth().currentUser
         //        print(user)
         let ref = Database.database().reference()
-//        let storageRef = Storage.storage().reference()
+        //        let storageRef = Storage.storage().reference()
         
         if let user = user {
             //            let imageUrlString: String = (imageUrl?.path)!
+            var finalImageUrl: String?
             guard let image = imageView.image else { return }
-            guard let imageData = image.jpegData(compressionQuality: 0.1) else { return }
+            guard let imageData = image.jpegData(compressionQuality: 0) else { return }
             let uploadImageRef = imageReference.child("\(user.uid).jpg")
             let uploadTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
                 print("UPLOAD TASK FINISHED")
-//                print(metadata ?? "NO METADATA")
-//                print(error ?? "NO ERROR")
+                uploadImageRef.downloadURL{ (url, error) in
+                    if let url=url {
+                        // Get the download URL
+                        finalImageUrl = url.absoluteString
+                        print(finalImageUrl)
+                        let userObject = [
+                            "first name": self.firstNameTextField.text!,
+                            "last name": self.lastNameTextField.text!,
+                            "phone number": self.phoneNumField.text!,
+                            "profile picture" : finalImageUrl!,
+                            ] as [String:Any]
+                        ref.child("users").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
+                            if error == nil {
+                                self.performSegue(withIdentifier: "MainPageSegue", sender: self)
+                                
+                            } else {
+                                // Handle the error
+                            }
+                        })
+                    }
+                    else{
+                        //error
+                    }
+                }
+                print(metadata ?? "NO METADATA")
+                print(error ?? "NO ERROR")
             }
             uploadTask.observe(.progress) { (snapshot) in
                 print(snapshot.progress ?? "NO MORE PROGRESS")
             }
             uploadTask.resume()
-            let userObject = [
-                "first name": firstNameTextField.text!,
-                "last name": lastNameTextField.text!,
-                "phone number": phoneNumField.text!,
-//                "profile picture" : finalImageUrl!,
-                ] as [String:Any]
-            ref.child("users").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
-                if error == nil {
-                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
-                    
-                } else {
-                    // Handle the error
-                }
-            })
         }
     }
 }
