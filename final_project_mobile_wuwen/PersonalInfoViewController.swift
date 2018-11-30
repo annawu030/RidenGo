@@ -22,7 +22,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
-    var imageUrl: NSURL?
+ //   var imageUrl: NSURL?
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
@@ -40,6 +40,13 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         self.dismiss(animated: true, completion: nil)
@@ -51,7 +58,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(PersonalInfoViewControlller.image(image:didFinishSavingWithError:contextInfo:)), nil)
             }
         }
-        imageUrl = (info[UIImagePickerController.InfoKey.referenceURL] as! NSURL)
+    //    imageUrl = (info[UIImagePickerController.InfoKey.referenceURL] as! NSURL)
     }
     
     @IBAction func useCamera(_ sender: AnyObject) {
@@ -120,13 +127,13 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         print("IIIIIIIAMMMMMHEEEEEEEERELOOOOOOKATMEEEEEE")
         print(user)
         let ref = Database.database().reference()
-        let imageUrlString: String = imageUrl!.absoluteString!
+      //  let imageUrlString: String = imageUrl!.absoluteString!
         if let user = user {
             let userObject = [
                 "first name": firstNameTextField.text!,
                 "last name": lastNameTextField.text!,
                 "phone number": phoneNumField.text!,
-                "profile picture" : imageUrlString,
+         //       "profile picture" : imageUrlString,
                 ] as [String:Any]
             ref.child("users").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                 if error == nil {
