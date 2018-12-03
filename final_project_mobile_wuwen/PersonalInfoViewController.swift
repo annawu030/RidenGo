@@ -22,6 +22,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     var newMedia: Bool?
     var photoURL: NSURL?
 
+    
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
         if error != nil {
@@ -99,6 +100,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PersonalInfoViewControlller.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
         
     }
@@ -121,7 +123,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         let user = Auth.auth().currentUser
         //        print(user)
         let ref = Database.database().reference()
-//        let storageRef = Storage.storage().reference()
+        //        let storageRef = Storage.storage().reference()
         
         if let user = user {
             //            let imageUrlString: String = (imageUrl?.path)!

@@ -1,29 +1,22 @@
 //
-//  MainPageViewController.swift
+//  DriverListViewController.swift
 //  final_project_mobile_wuwen
 //
-//  Created by Justine Wen on 11/14/18.
+//  Created by Justine Wen on 11/30/18.
 //  Copyright © 2018 final-wuwen. All rights reserved.
 //
 
 import UIKit
 
-class MainPageViewController: UIViewController {
-    @IBOutlet weak var radiusPicker: UIPickerView!
-    
-    var radiusPickerData: [String] = [String]()
-    
+class DriverListViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Select Date & Time"
-        radiusPickerData = ["3 miles", "5 miles", "7 miles", "10 miles", "15 miles", "20 miles"]
+        self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
+        
+
     /*
     // MARK: - Navigation
 

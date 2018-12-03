@@ -16,6 +16,8 @@
 		C4E5E397219A5D34005CD72D /* final_project_mobile_wuwenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E396219A5D34005CD72D /* final_project_mobile_wuwenTests.swift */; };
 		C4E5E3A2219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */; };
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
+		C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListViewController.swift */; };
+		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
 		DCA879CA21ACD86E00C1F473 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */; };
 		DCA879CC21ACD89D00C1F473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA879CB21ACD89D00C1F473 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = final_project_mobile_wuwenUITests.swift; sourceTree = "<group>"; };
 		C4E5E3A3219A5D34005CD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C4FC57ED21B1DE430073016E /* DriverListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewController.swift; sourceTree = "<group>"; };
+		C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoPageViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
+				C4FC57ED21B1DE430073016E /* DriverListViewController.swift */,
+				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
 			);
 			path = final_project_mobile_wuwen;
 			sourceTree = "<group>";
@@ -411,8 +417,10 @@
 			files = (
 				DCA879CA21ACD86E00C1F473 /* MainPageViewController.swift in Sources */,
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
+				C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
+				C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */,
 				DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */,
 				C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */,
 			);
