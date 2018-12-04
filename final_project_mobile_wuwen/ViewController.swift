@@ -55,6 +55,11 @@ class ViewController: UIViewController {
     @IBAction func signUpButtonTapped(_ sender:UIButton){
         self.performSegue(withIdentifier: "SignUpPageSegue", sender: self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 }
 
 

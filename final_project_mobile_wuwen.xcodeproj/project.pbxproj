@@ -19,9 +19,14 @@
 		C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListViewController.swift */; };
 		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
-		DCA879CA21ACD86E00C1F473 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */; };
-		DCA879CC21ACD89D00C1F473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA879CB21ACD89D00C1F473 /* Main.storyboard */; };
+		DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */; };
 		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
+		DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */; };
+		DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */; };
+		DCDCDD1F21B6FAD1000A8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */; };
+		DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */; };
+		DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */; };
+		DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,9 +72,14 @@
 		C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoPageViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		DCA879CB21ACD89D00C1F473 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRidePageViewController.swift; sourceTree = "<group>"; };
 		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
+		DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
+		DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
+		DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RODViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDrivePageViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDestViewController.swift; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,14 +160,19 @@
 			isa = PBXGroup;
 			children = (
 				C4E5E381219A5D32005CD72D /* AppDelegate.swift */,
-				DCA879C921ACD86E00C1F473 /* MainPageViewController.swift */,
+				DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */,
+				DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */,
+				DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */,
+				DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */,
 				C4E5E383219A5D32005CD72D /* ViewController.swift */,
-				DCA879CB21ACD89D00C1F473 /* Main.storyboard */,
+				DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */,
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
 				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
 				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
+				DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
+				DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
 				C4FC57ED21B1DE430073016E /* DriverListViewController.swift */,
 				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
@@ -195,6 +210,7 @@
 				C4E5E37B219A5D32005CD72D /* Frameworks */,
 				C4E5E37C219A5D32005CD72D /* Resources */,
 				82CE0483EA3045EB4B2FDE4F /* [CP] Embed Pods Frameworks */,
+				6E527E8C2F35D68885497B79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,9 +307,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA879CC21ACD89D00C1F473 /* Main.storyboard in Resources */,
 				C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */,
 				DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */,
+				DCDCDD1F21B6FAD1000A8F7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +396,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E527E8C2F35D68885497B79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-final_project_mobile_wuwen/Pods-final_project_mobile_wuwen-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-final_project_mobile_wuwen/Pods-final_project_mobile_wuwen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		82CE0483EA3045EB4B2FDE4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,11 +455,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA879CA21ACD86E00C1F473 /* MainPageViewController.swift in Sources */,
+				DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */,
+				DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */,
+				DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */,
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
+				DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */,
 				C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
+				DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
+				DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */,
 				C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */,
 				DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */,
 				C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */,
