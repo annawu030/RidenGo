@@ -23,10 +23,10 @@
 		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
 		DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */; };
 		DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */; };
-		DCDCDD1F21B6FAD1000A8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */; };
 		DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */; };
 		DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */; };
 		DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */; };
+		DCDCDD2721B71E2A000A8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDD2621B71E2A000A8F7B /* Main.storyboard */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,10 +76,10 @@
 		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
 		DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
 		DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
 		DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RODViewController.swift; sourceTree = "<group>"; };
 		DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDrivePageViewController.swift; sourceTree = "<group>"; };
 		DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDestViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2621B71E2A000A8F7B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,13 +159,13 @@
 		C4E5E380219A5D32005CD72D /* final_project_mobile_wuwen */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCDD2621B71E2A000A8F7B /* Main.storyboard */,
 				C4E5E381219A5D32005CD72D /* AppDelegate.swift */,
 				DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */,
 				DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */,
 				DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */,
 				DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */,
 				C4E5E383219A5D32005CD72D /* ViewController.swift */,
-				DCDCDD1E21B6FAD0000A8F7B /* Main.storyboard */,
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
 				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
@@ -307,9 +307,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDCDD2721B71E2A000A8F7B /* Main.storyboard in Resources */,
 				C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */,
 				DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */,
-				DCDCDD1F21B6FAD1000A8F7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

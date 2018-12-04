@@ -101,9 +101,20 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
             destLat = source!.placeLat
             destLng = source!.placeLng
             
-            print(destName.text)
-            print(destLat)
-            print(destLng)
+            let lat = destLat
+            let long = destLng
+            let destLocation = CLLocation(latitude: lat!, longitude: long!)
+            let destLocation2D = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
+            let regionRadius: CLLocationDistance = 1000
+//            func centerMapOnLocation(location: CLLocation) {
+//                let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+//                                                          latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//                mapView.setRegion(coordinateRegion, animated: true)
+//            }
+//            centerMapOnLocation(location: initialLocation)
+            let newPin = MKPointAnnotation()
+            newPin.coordinate = destLocation2D
+            mapView.addAnnotation(newPin)
             
         }
     }
