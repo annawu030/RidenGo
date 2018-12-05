@@ -14,21 +14,29 @@ class Driver {
     var driverName: String
     var phone: String
     var profile: String
+    var startName: String
+    var startLat: Double
+    var startLng: Double
     var destName: String
     var destLat: Double
     var destLng: Double
     var date: String
     var distDiff: Double
+    var uid: String
     
-    init(driverName: String, phone: String, profile: String, destName: String, destLat: Double, destLng: Double, date: String, distDiff: Double) {
+    init(driverName: String, phone: String, profile: String, startName: String, startLat: Double, startLng: Double, destName: String, destLat: Double, destLng: Double, date: String, distDiff: Double, uid: String) {
         self.driverName = driverName
         self.phone = phone
         self.profile = profile
+        self.startName = destName
+        self.startLat = destLat
+        self.startLng = destLng
         self.destName = destName
         self.destLat = destLat
         self.destLng = destLng
         self.date = date
         self.distDiff = distDiff
+        self.uid = uid
     }
     
     static func sortList(list: Array<Driver>) -> Array<Driver> {

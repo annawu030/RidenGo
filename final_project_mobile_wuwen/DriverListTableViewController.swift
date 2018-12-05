@@ -16,6 +16,7 @@ class DriverListTableViewController: UITableViewController{
     var riderLat: Double! = 0.0
     var riderLng: Double! = 0.0
     var driverList = [Driver]()
+    var driverRecordList = [Driver]()
 //    var indexOfEdit: Int = 0
     @IBOutlet weak var tableViewDrivers: UITableView!
     
@@ -73,6 +74,9 @@ class DriverListTableViewController: UITableViewController{
                     let driverName  = driverObject?["name"]
                     let phone  = driverObject?["phone"]
                     let profile = driverObject?["profile"]
+                    let startName = driverObject?["start name"]
+                    let startLat = driverObject?["start lat"]
+                    let startLng = driverObject?["start lng"]
                     let destName = driverObject?["dest name"]
                     let destLat = driverObject?["dest lat"]
                     let destLng = driverObject?["dest lng"]
@@ -82,14 +86,18 @@ class DriverListTableViewController: UITableViewController{
                     let coordinateDriver = CLLocation(latitude: destLat as! CLLocationDegrees, longitude: destLng as! CLLocationDegrees)
                     let distDiff = coordinateDriver.distance(from: coordinateRider)
                     //                    let distDiff = driverObject?["dest lng"]
+                    let uid = drivers.key
+//                    print("UUUUUUIIIIIIDDDDD")
+//                    print(uid)
 
 
                     //creating artist object with model and fetched values
-                    let driver = Driver(driverName: driverName as! String, phone: phone as! String, profile: profile as! String, destName: destName as! String, destLat: destLat as! Double, destLng: destLng as! Double, date: date as! String, distDiff: distDiff )
-                    print(driver)
+                    let driver = Driver(driverName: driverName as! String, phone: phone as! String, profile: profile as! String, startName: startName as! String, startLat: startLat as! Double, startLng: startLng as! Double, destName: destName as! String, destLat: destLat as! Double, destLng: destLng as! Double, date: date as! String, distDiff: distDiff, uid: uid)
+//                    print(driver)
 
                     //appending it to list
                     self.driverList.append(driver)
+//                    self.driverRecordList.append(driver)
                 }
 
                 //reloading the tableview
@@ -98,7 +106,7 @@ class DriverListTableViewController: UITableViewController{
         })
 
        // FirebaseApp.configure()
-        print(driverList.count)
+//        print(driverList[0].driverName)
 //        if (driverList.count == 0){
 //            
 //        }
@@ -127,23 +135,31 @@ class DriverListTableViewController: UITableViewController{
         cell.driverNameLabel.text = driver.driverName
         cell.destNameLabel.text = driver.destName
         cell.distDiffLabel.text = String(driver.distDiff)
+//        self.performSegue(withIdentifier: "viewDriverInfo", sender: driver)
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView,
-//                            editActionsForRowAt: IndexPath) -> [UITableViewRowAction]?{
-//        let view = UITableViewRowAction(style: .normal, title: "View") { action, index in
-//            //  item at indexPath
-//            let cell = tableView.cellForRow(at: editActionsForRowAt)! as! DriverTableViewCell
-//
-//            let index = self.driverList.index(where: {$0.driverName == cell.driverNameLabel.text})
+    override func tableView(_ tableView: UITableView,
+                            editActionsForRowAt: IndexPath) -> [UITableViewRowAction]?{
+        let view = UITableViewRowAction(style: .normal, title: "View") { action, index in
+            //  item at indexPath
+            let cell = tableView.cellForRow(at: editActionsForRowAt)! as! DriverTableViewCell
+
+            let index = self.driverList.index(where: {$0.driverName == cell.driverNameLabel.text})
 //            self.indexOfEdit = index!
-//            self.performSegue(withIdentifier: "viewDriverInfo", sender: self.driverList[index!])
-//            //  self.bucketItemList.remove(at: (indexPath.rsow-1))
-//        }
-//
-//        view.backgroundColor = UIColor.blue
-//        return [view]
-//    }
+            self.performSegue(withIdentifier: "viewDriverInfo", sender: self.driverList[index!])
+            //  self.bucketItemList.remove(at: (indexPath.rsow-1))
+        }
+
+        view.backgroundColor = UIColor.blue
+        return [view]
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "viewDriverInfo"){
+            let destination = segue.destination as! DriverInfoPageViewController
+            let driverSender = sender as! Driver?
+            destination.driver = driverSender
+        }
+    }
 
 }

@@ -9,9 +9,23 @@
 import UIKit
 
 class DriverInfoPageViewController: UIViewController {
-
+    var driver: Driver!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var destNameLabel: UILabel!
+    @IBOutlet weak var distDiffLabel: UILabel!
+    @IBOutlet weak var phoneField: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("INNNNNN DriverInfo")
+        print(driver.driverName)
+        print(driver.destName)
+        nameLabel.text = driver.driverName
+        destNameLabel.text = driver.destName
+        let diff = driver.distDiff
+        distDiffLabel.text = diff.description
+        phoneField.text = driver?.phone
 
         // Do any additional setup after loading the view.
     }
