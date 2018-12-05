@@ -11,10 +11,8 @@ import MapKit
 import GoogleMaps
 import Firebase
 
-class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class MainDrivePageViewController: UIViewController{
     //Radius Picker Portion
-    @IBOutlet weak var pickerView: UIPickerView!
-    let radius = ["3 miles", "5 miles", "7 miles", "10 miles", "15 miles", "20 miles"]
     
     @IBOutlet weak var dateField: UIDatePicker!
     
@@ -26,37 +24,12 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
     var destLng: Double?
     @IBOutlet var destName: UITextField!
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return radius.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return radius[row]
-    }
-    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapDestView: MKMapView!
     
     override func viewDidLoad() {
         //Mapkit ViewDidLoad Section
         super.viewDidLoad()
-//        let lat = 38.8977
-//        let long = -77.0365
-//        let initialLocation = CLLocation(latitude: lat, longitude: long)
-//        let initialLocation2D = CLLocationCoordinate2D(latitude: lat, longitude: long)
-//        let regionRadius: CLLocationDistance = 1000
-//        func centerMapOnLocation(location: CLLocation) {
-//            let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-//                                                      latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-//            mapView.setRegion(coordinateRegion, animated: true)
-//        }
-//        centerMapOnLocation(location: initialLocation)
-//        let newPin = MKPointAnnotation()
-//        newPin.coordinate = initialLocation2D
-//        mapView.addAnnotation(newPin)
-
         let date = Date()
         let calendar = Calendar.current
         dateField.minimumDate = date
@@ -169,23 +142,28 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
                     "dest lng": self.destLng,
                     "date departure": strDate,
                     ] as [String:Any]
-                ref.child("drivers").child(strDateID).child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
-                    if error == nil {
-                        //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
-                        
-                    } else {
-                        // Handle the error
-                        let alert = UIAlertController(title: "Repeat Date!", message: "You may only post 1 drive on chosen date. Please reschedule your drive.", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                        self.present(alert, animated: true)
-                    }
-                })
+                if (self.startPlaceLat == nil || self.startPlaceLng == nil || self.destLat == nil || self.destLng == nil){
+                    let alert = UIAlertController(title: "Missing Information", message: "Make sure you fill out all information before submiting.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
+                else{
+                    ref.child("drivers").child(strDateID).child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
+                        if error == nil {
+                            //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
+                            
+                        } else {
+                            // Handle the error
+                            
+                        }
+                    })
+                    
+                }
             }) { (error) in
                 print(error.localizedDescription)
             }
             
         }
-
 //        performSegue(withIdentifier: , sender: self)
     }
 }
