@@ -585,7 +585,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Finish"/>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MainPageSegue" id="WrA-TO-CkY"/>
+                                                    <action selector="verifiedButtonTappedWithSender:" destination="M25-sA-P6u" eventType="touchUpInside" id="5D3-Te-hJj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kga-v4-g6v">
@@ -649,11 +649,12 @@
                         <outlet property="imageView" destination="hIA-Wv-ghi" id="5oc-b8-XIb"/>
                         <outlet property="lastNameTextField" destination="DdI-O1-wxj" id="a3b-Ru-Kpq"/>
                         <outlet property="phoneNumField" destination="zfh-bZ-b4C" id="Xqf-dr-SED"/>
+                        <segue destination="yPV-zP-Urc" kind="show" identifier="MainPageSegue" id="oYU-LC-ONL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jt5-zn-Ckb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3776.8000000000002" y="554.57271364317842"/>
+            <point key="canvasLocation" x="3737" y="581"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cCt-YV-ydL">
@@ -724,6 +725,9 @@
                                                 <rect key="frame" x="173" y="575" width="37" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="pru-Sz-Rra" eventType="touchUpInside" id="t4j-9q-mZA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1L7-Ja-oox">
                                                 <rect key="frame" x="129" y="73" width="125" height="30"/>
@@ -782,6 +786,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="750"/>
                     <connections>
+                        <outlet property="dateField" destination="cfK-1n-h8a" id="D1W-SB-KRW"/>
                         <outlet property="destName" destination="0sK-Q0-CEA" id="WVD-qt-rxw"/>
                         <outlet property="mapView" destination="16g-f4-nuu" id="MQH-Ax-N17"/>
                         <outlet property="pickerView" destination="2bv-1W-GtR" id="D9W-bZ-6oh"/>
@@ -918,6 +923,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WrA-TO-CkY"/>
+        <segue reference="oYU-LC-ONL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,6 @@
 ///////////////////////////////////////////////////////////
 //https://stackoverflow.com/questions/38046663/where-do-i-add-the-database-reference-from-firebase-on-ios
 //https://firebase.google.com/docs/database/ios/read-and-write
-
 import UIKit
 import MobileCoreServices
 import Firebase
@@ -21,7 +20,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
     var photoURL: NSURL?
-
+    
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSErrorPointer, contextInfo:UnsafeRawPointer) {
         
@@ -127,6 +126,7 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
         
         if let user = user {
             //            let imageUrlString: String = (imageUrl?.path)!
+            print(user)
             var finalImageUrl: String?
             guard let image = imageView.image else { return }
             guard let imageData = image.jpegData(compressionQuality: 0) else { return }
@@ -157,8 +157,8 @@ class PersonalInfoViewControlller: UIViewController, UIImagePickerControllerDele
                         //error
                     }
                 }
-                print(metadata ?? "NO METADATA")
-                print(error ?? "NO ERROR")
+                //                print(metadata ?? "NO METADATA")
+                //                print(error ?? "NO ERROR")
             }
             uploadTask.observe(.progress) { (snapshot) in
                 print(snapshot.progress ?? "NO MORE PROGRESS")

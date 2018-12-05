@@ -9,13 +9,15 @@
 import UIKit
 import MapKit
 import GoogleMaps
+import Firebase
 
 class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     //Radius Picker Portion
     @IBOutlet weak var pickerView: UIPickerView!
     let radius = ["3 miles", "5 miles", "7 miles", "10 miles", "15 miles", "20 miles"]
     
-//    @IBOutlet var startPlaceName: UITextField!
+    @IBOutlet weak var dateField: UIDatePicker!
+    
     var startPlaceLat: Double?
     var startPlaceLng: Double?
     @IBOutlet var startPlaceName: UITextField!
@@ -52,6 +54,10 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
         let newPin = MKPointAnnotation()
         newPin.coordinate = initialLocation2D
         mapView.addAnnotation(newPin)
+
+        let date = Date()
+        let calendar = Calendar.current
+        dateField.minimumDate = date
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,12 +118,73 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
 //                mapView.setRegion(coordinateRegion, animated: true)
 //            }
 //            centerMapOnLocation(location: initialLocation)
-            let newPin = MKPointAnnotation()
-            newPin.coordinate = destLocation2D
-            mapView.addAnnotation(newPin)
+            let destPin = MKPointAnnotation()
+            destPin.coordinate = destLocation2D
+            mapView.addAnnotation(destPin)
             
         }
     }
-    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        print("it is called")
+        let date = dateField.date
+//        print (date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy:MM:dd hh:mm:ss"
+        let timeZone = TimeZone(identifier: "America/New_York")
+        dateFormatter.timeZone = timeZone
+        let strDate = dateFormatter.string(from: date)
+        print (strDate)
+        
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "yyy:MM:dd"
+        dateFormatter2.timeZone = timeZone
+        let strDateID = dateFormatter2.string(from: date)
+        print (strDateID)
+//        let short = strDate.index(strDate.endIndex, offsetBy: -9)
+//        print (strDate[short])
+        
+        let user = Auth.auth().currentUser
+        let ref = Database.database().reference()
+        if let user = user {
+            ref.child("users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let firstName = value?["first name"] as? String ?? ""
+                let lastName = value?["last name"] as? String ?? ""
+                let name = "\(firstName) \(lastName)"
+                let phone = value?["phone number"] as? String ?? ""
+                let profile = value?["profile picture"] as? String ?? ""
+                let userObject = [
+                    "name": name,
+                    "email": user.email!,
+                    "phone": phone,
+                    "profile": profile,
+                    "start name": self.startPlaceName.text,
+                    "start lat": self.startPlaceLat,
+                    "start lng": self.startPlaceLng,
+                    "dest name": self.destName.text,
+                    "dest lat": self.destLat,
+                    "dest lng": self.destLng,
+                    "date departure": strDate,
+                    ] as [String:Any]
+                ref.child("drivers").child(strDateID).child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
+                    if error == nil {
+                        //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
+                        
+                    } else {
+                        // Handle the error
+                        let alert = UIAlertController(title: "Repeat Date!", message: "You may only post 1 drive on chosen date. Please reschedule your drive.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                })
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+        }
+
+//        performSegue(withIdentifier: , sender: self)
+    }
 }
 
