@@ -84,7 +84,7 @@ class DriverListTableViewController: UITableViewController{
 
                     let coordinateRider = CLLocation(latitude: self.riderLat!, longitude: self.riderLng!)
                     let coordinateDriver = CLLocation(latitude: destLat as! CLLocationDegrees, longitude: destLng as! CLLocationDegrees)
-                    let distDiff = coordinateDriver.distance(from: coordinateRider)
+                    let distDiff = coordinateDriver.distance(from: coordinateRider)/1609.34
                     //                    let distDiff = driverObject?["dest lng"]
                     let uid = drivers.key
 //                    print("UUUUUUIIIIIIDDDDD")
