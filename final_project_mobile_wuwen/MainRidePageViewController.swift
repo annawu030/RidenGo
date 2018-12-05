@@ -156,7 +156,8 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
                     "dest name": self.destName.text,
                     "dest lat": self.destLat,
                     "dest lng": self.destLng,
-                    "date departure": strDate,
+                    "time departure": strDate,
+                    "date departure": strDateID,
                     ] as [String:Any]
                 if (self.startPlaceLat == nil || self.startPlaceLng == nil || self.destLat == nil || self.destLng == nil){
                     let alert = UIAlertController(title: "Missing Information", message: "Make sure you fill out all information before submiting.", preferredStyle: .alert)
@@ -166,8 +167,7 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
                 else{
                     ref.child("riders").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                         if error == nil {
-                            //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
-                            
+                            self.performSegue(withIdentifier: "DriverListSegue", sender: self)
                         } else {
                             // Handle the error
                             

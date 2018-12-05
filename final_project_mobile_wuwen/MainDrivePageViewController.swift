@@ -13,7 +13,7 @@ import Firebase
 
 class MainDrivePageViewController: UIViewController{
     //Radius Picker Portion
-    
+    var riderDate: String?
     @IBOutlet weak var dateField: UIDatePicker!
     
     var startPlaceLat: Double?
@@ -114,6 +114,7 @@ class MainDrivePageViewController: UIViewController{
         dateFormatter2.dateFormat = "yyy:MM:dd"
         dateFormatter2.timeZone = timeZone
         let strDateID = dateFormatter2.string(from: date)
+        riderDate = strDateID
         print (strDateID)
 //        let short = strDate.index(strDate.endIndex, offsetBy: -9)
 //        print (strDate[short])
