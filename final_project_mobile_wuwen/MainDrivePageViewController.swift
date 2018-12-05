@@ -37,23 +37,25 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapDestView: MKMapView!
+    
     override func viewDidLoad() {
         //Mapkit ViewDidLoad Section
         super.viewDidLoad()
-        let lat = 38.8977
-        let long = -77.0365
-        let initialLocation = CLLocation(latitude: lat, longitude: long)
-        let initialLocation2D = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        let regionRadius: CLLocationDistance = 1000
-        func centerMapOnLocation(location: CLLocation) {
-            let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                      latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-            mapView.setRegion(coordinateRegion, animated: true)
-        }
-        centerMapOnLocation(location: initialLocation)
-        let newPin = MKPointAnnotation()
-        newPin.coordinate = initialLocation2D
-        mapView.addAnnotation(newPin)
+//        let lat = 38.8977
+//        let long = -77.0365
+//        let initialLocation = CLLocation(latitude: lat, longitude: long)
+//        let initialLocation2D = CLLocationCoordinate2D(latitude: lat, longitude: long)
+//        let regionRadius: CLLocationDistance = 1000
+//        func centerMapOnLocation(location: CLLocation) {
+//            let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+//                                                      latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//            mapView.setRegion(coordinateRegion, animated: true)
+//        }
+//        centerMapOnLocation(location: initialLocation)
+//        let newPin = MKPointAnnotation()
+//        newPin.coordinate = initialLocation2D
+//        mapView.addAnnotation(newPin)
 
         let date = Date()
         let calendar = Calendar.current
@@ -112,15 +114,15 @@ class MainDrivePageViewController: UIViewController, UIPickerViewDelegate, UIPic
             let destLocation = CLLocation(latitude: lat!, longitude: long!)
             let destLocation2D = CLLocationCoordinate2D(latitude: lat!, longitude: long!)
             let regionRadius: CLLocationDistance = 1000
-//            func centerMapOnLocation(location: CLLocation) {
-//                let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-//                                                          latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-//                mapView.setRegion(coordinateRegion, animated: true)
-//            }
-//            centerMapOnLocation(location: initialLocation)
+            func centerMapOnLocation(location: CLLocation) {
+                let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                          latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+                mapDestView.setRegion(coordinateRegion, animated: true)
+            }
+            centerMapOnLocation(location: destLocation)
             let destPin = MKPointAnnotation()
             destPin.coordinate = destLocation2D
-            mapView.addAnnotation(destPin)
+            mapDestView.addAnnotation(destPin)
             
         }
     }

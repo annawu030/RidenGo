@@ -674,7 +674,7 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
-        <!--Main Drive Page View Controller-->
+        <!--Driver Planner-->
         <scene sceneID="czD-Vh-gEs">
             <objects>
                 <viewController id="pru-Sz-Rra" customClass="MainDrivePageViewController" customModule="final_project_mobile_wuwen" customModuleProvider="target" sceneMemberID="viewController">
@@ -685,78 +685,69 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uC1-qP-VNh">
                                 <rect key="frame" x="0.0" y="66" width="375" height="684"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swy-oG-44n">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Swy-oG-44n">
+                                        <rect key="frame" x="0.0" y="-15" width="375" height="700"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What date and time?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-LH-RHl">
-                                                <rect key="frame" x="28" y="149" width="158" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-LH-RHl">
+                                                <rect key="frame" x="121" y="463" width="141" height="18"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-1n-h8a">
-                                                <rect key="frame" x="36" y="178" width="311" height="162"/>
+                                                <rect key="frame" x="48" y="488" width="286" height="149"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="564121215.83410001">
                                                     <!--2018-11-17 04:20:15 +0000-->
                                                 </date>
                                             </datePicker>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbJ-w5-QeN">
-                                                <rect key="frame" x="30" y="348" width="123" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="16g-f4-nuu">
-                                                <rect key="frame" x="47" y="426" width="289" height="141"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </mapView>
-                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-1W-GtR">
-                                                <rect key="frame" x="36" y="365" width="150" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="pru-Sz-Rra" id="0yR-gI-Xpx"/>
-                                                    <outlet property="delegate" destination="pru-Sz-Rra" id="omS-We-Y8B"/>
-                                                </connections>
-                                            </pickerView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq9-DI-Hsh">
-                                                <rect key="frame" x="173" y="575" width="37" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Done"/>
-                                                <connections>
-                                                    <action selector="saveButtonTapped:" destination="pru-Sz-Rra" eventType="touchUpInside" id="t4j-9q-mZA"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1L7-Ja-oox">
-                                                <rect key="frame" x="129" y="73" width="125" height="30"/>
+                                                <rect key="frame" x="129" y="231" width="125" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Select Destination"/>
                                                 <connections>
                                                     <segue destination="bYN-ve-Vgr" kind="show" identifier="destinationSegue" id="QVD-Fj-KVX"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="KBc-Ui-cTk">
-                                                <rect key="frame" x="28" y="38" width="319" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-Q0-CEA">
-                                                <rect key="frame" x="28" y="105" width="319" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg0-w3-Q4n">
-                                                <rect key="frame" x="119" y="8" width="144" height="30"/>
+                                                <rect key="frame" x="119" y="2" width="144" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Select Start Location"/>
                                                 <connections>
                                                     <segue destination="2md-AR-n96" kind="show" identifier="searchPlaceSegue" id="Aax-fr-uTj"/>
+                                                </connections>
+                                            </button>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="16g-f4-nuu">
+                                                <rect key="frame" x="21" y="56" width="334" height="161"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </mapView>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Umv-Q5-92W">
+                                                <rect key="frame" x="21" y="283" width="334" height="161"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </mapView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-uh-Jko">
+                                                <rect key="frame" x="21" y="34" width="334" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-Y7-EtL">
+                                                <rect key="frame" x="21" y="261" width="334" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq9-DI-Hsh">
+                                                <rect key="frame" x="173" y="635" width="37" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="pru-Sz-Rra" eventType="touchUpInside" id="t4j-9q-mZA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -784,20 +775,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mc2-P7-7S9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Driver Planner" id="p70-9y-nHt"/>
                     <size key="freeformSize" width="375" height="750"/>
                     <connections>
                         <outlet property="dateField" destination="cfK-1n-h8a" id="D1W-SB-KRW"/>
-                        <outlet property="destName" destination="0sK-Q0-CEA" id="WVD-qt-rxw"/>
+                        <outlet property="destName" destination="0qq-Y7-EtL" id="Unw-SM-PHB"/>
+                        <outlet property="mapDestView" destination="Umv-Q5-92W" id="1hl-9e-q85"/>
                         <outlet property="mapView" destination="16g-f4-nuu" id="MQH-Ax-N17"/>
-                        <outlet property="pickerView" destination="2bv-1W-GtR" id="D9W-bZ-6oh"/>
-                        <outlet property="startPlaceName" destination="KBc-Ui-cTk" id="oI5-ol-aSu"/>
+                        <outlet property="startPlaceName" destination="FkN-uh-Jko" id="Gdv-Qu-HA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eu1-yJ-euC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3057" y="-240"/>
+            <point key="canvasLocation" x="3056.8000000000002" y="-240.17991004497753"/>
         </scene>
-        <!--Search Place View Controller-->
+        <!--Start Location-->
         <scene sceneID="3qc-zL-cMM">
             <objects>
                 <viewController id="2md-AR-n96" customClass="SearchPlaceViewController" customModule="final_project_mobile_wuwen" customModuleProvider="target" sceneMemberID="viewController">
@@ -849,6 +841,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LeR-qt-rZv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Start Location" id="SQU-X8-IiJ"/>
                     <connections>
                         <outlet property="tableView" destination="3JL-68-34S" id="h4k-Ep-rcI"/>
                         <outlet property="txtSearch" destination="A4e-n9-85R" id="dqJ-pj-2SO"/>
@@ -859,7 +852,7 @@
             </objects>
             <point key="canvasLocation" x="3905" y="-278"/>
         </scene>
-        <!--Search Dest View Controller-->
+        <!--Destination-->
         <scene sceneID="NbL-Iu-zzF">
             <objects>
                 <viewController id="bYN-ve-Vgr" customClass="SearchDestViewController" customModule="final_project_mobile_wuwen" customModuleProvider="target" sceneMemberID="viewController">
@@ -911,6 +904,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="R7Z-XL-PCh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Destination" id="hqa-jB-S8G"/>
                     <connections>
                         <outlet property="tableView" destination="1j1-H0-oKk" id="jpJ-x5-fb7"/>
                         <outlet property="txtSearch" destination="dD7-kH-SJz" id="cER-Rb-zhF"/>
