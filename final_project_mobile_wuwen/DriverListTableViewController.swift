@@ -55,7 +55,11 @@ class DriverListTableViewController: UITableViewController{
         print(self.riderDate)
         
         ref.child("drivers").child(self.riderDate).observe(DataEventType.value, with: { (snapshot) in
-
+            if snapshot.childrenCount == 0{
+                let alert = UIAlertController(title: "No Driver Available", message: "Seems like there are no available drivers for this date yet, try another day or check again later.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
             //if the reference have some values
             if snapshot.childrenCount > 0 {
 
@@ -94,7 +98,10 @@ class DriverListTableViewController: UITableViewController{
         })
 
        // FirebaseApp.configure()
-        
+        print(driverList.count)
+//        if (driverList.count == 0){
+//            
+//        }
         // Do any additional setup after loading the view.
     }
     
@@ -102,6 +109,10 @@ class DriverListTableViewController: UITableViewController{
 //        super.viewWillAppear(animated)
 //        tableViewDrivers.reloadData()
 //    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 110;//Choose your custom row height
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return driverList.count

@@ -58,7 +58,7 @@ class Driver {
 //            let distRD1 = coordinateRider.distance(from: coordinateDriver1)
 //            let distRD2 = coordinateRider.distance(from: coordinateDriver2)
 //            if distRD1 < distRD2{
-            return driver1.distDiff < driver2.distDiff
+            return driver1.distDiff > driver2.distDiff
 //            }
 //            return !bucketItem1.check && bucketItem2.check
         }

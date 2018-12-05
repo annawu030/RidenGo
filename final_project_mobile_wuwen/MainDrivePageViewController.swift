@@ -75,9 +75,9 @@ class MainDrivePageViewController: UIViewController{
         if(segue.identifier == "searchDestToMainPageSeague"){
             print("HERE IN GEEEEET DEEEEST DETAIL!!!")
             let source = segue.source as? SearchDestViewController
-//            print(source!.placeName)
-//            print(source!.placeLat)
-//            print(source!.placeLng)
+            //            print(source!.placeName)
+            //            print(source!.placeLat)
+            //            print(source!.placeLng)
             destName.text = source!.placeName
             destLat = source!.placeLat
             destLng = source!.placeLng
@@ -102,7 +102,7 @@ class MainDrivePageViewController: UIViewController{
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         print("it is called")
         let date = dateField.date
-//        print (date)
+        //        print (date)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyy:MM:dd hh:mm:ss"
         let timeZone = TimeZone(identifier: "America/New_York")
@@ -116,8 +116,8 @@ class MainDrivePageViewController: UIViewController{
         let strDateID = dateFormatter2.string(from: date)
         riderDate = strDateID
         print (strDateID)
-//        let short = strDate.index(strDate.endIndex, offsetBy: -9)
-//        print (strDate[short])
+        //        let short = strDate.index(strDate.endIndex, offsetBy: -9)
+        //        print (strDate[short])
         
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
@@ -152,7 +152,11 @@ class MainDrivePageViewController: UIViewController{
                     ref.child("drivers").child(strDateID).child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                         if error == nil {
                             //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
+                            let alert = UIAlertController(title: "Driver Information Recorded!", message: "Thanks for being a driver! Your information has been saved.", preferredStyle: .alert)
                             
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            
+                            self.present(alert, animated: true)
                         } else {
                             // Handle the error
                             
@@ -165,7 +169,6 @@ class MainDrivePageViewController: UIViewController{
             }
             
         }
-//        performSegue(withIdentifier: , sender: self)
+        //        performSegue(withIdentifier: , sender: self)
     }
 }
-
