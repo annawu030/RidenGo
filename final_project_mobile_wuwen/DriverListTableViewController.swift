@@ -21,8 +21,8 @@ class DriverListTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = true
         self.driverList = Driver.sortList(list: self.driverList)
         let user = Auth.auth().currentUser
@@ -42,7 +42,7 @@ class DriverListTableViewController: UITableViewController{
             }
             
         }
-        FirebaseApp.configure()
+       // FirebaseApp.configure()
         refDrivers = Database.database().reference().child("drivers").child(self.riderDate!);
         refDrivers.observe(DataEventType.value, with: { (snapshot) in
             

@@ -16,7 +16,7 @@
 		C4E5E397219A5D34005CD72D /* final_project_mobile_wuwenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E396219A5D34005CD72D /* final_project_mobile_wuwenTests.swift */; };
 		C4E5E3A2219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */; };
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
-		C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListViewController.swift */; };
+		C4FC57EE21B1DE430073016E /* DriverListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */; };
 		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
 		DC073A9621B77C21007B7491 /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */; };
 		DC073A9821B7852C007B7491 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9721B7852B007B7491 /* Driver.swift */; };
@@ -70,7 +70,7 @@
 		C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = final_project_mobile_wuwenUITests.swift; sourceTree = "<group>"; };
 		C4E5E3A3219A5D34005CD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		C4FC57ED21B1DE430073016E /* DriverListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewController.swift; sourceTree = "<group>"; };
+		C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListTableViewController.swift; sourceTree = "<group>"; };
 		C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoPageViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
 				DC073A9721B7852B007B7491 /* Driver.swift */,
 				DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */,
-				C4FC57ED21B1DE430073016E /* DriverListViewController.swift */,
+				C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */,
 				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
 			);
 			path = final_project_mobile_wuwen;
@@ -468,7 +468,7 @@
 				DC073A9621B77C21007B7491 /* DriverTableViewCell.swift in Sources */,
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
 				DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */,
-				C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */,
+				C4FC57EE21B1DE430073016E /* DriverListTableViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
 				DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
