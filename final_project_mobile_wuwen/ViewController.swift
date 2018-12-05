@@ -35,25 +35,31 @@ class ViewController: UIViewController {
         //Check some validation on email and passwords to make sure they are correct
         if let computingID = loginIDTextField.text, let pass = passwordTextField.text{
             Auth.auth().signIn(withEmail: computingID + "@virginia.edu", password: pass, completion: { (user, error) in
-            //check that user is not nil
-            //If user is real
+                //check that user is not nil
+                //If user is real
                 if let u = user{
                     // user is found, go to home screen
                     self.performSegue(withIdentifier: "PostSignInSegue", sender: self)
                 }
                 else{
                     //check error and show message
+                    let alert = UIAlertController(title: "Username and Password Problem!", message: "Please check your username and password and try again.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
                 }
             })
         }
-            
     }
     @IBAction func signUpButtonTapped(_ sender:UIButton){
-            self.performSegue(withIdentifier: "SignUpPageSegue", sender: self)
-    
-        
-        }
-        
+        self.performSegue(withIdentifier: "SignUpPageSegue", sender: self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+}
 
 

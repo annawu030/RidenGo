@@ -16,9 +16,20 @@
 		C4E5E397219A5D34005CD72D /* final_project_mobile_wuwenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E396219A5D34005CD72D /* final_project_mobile_wuwenTests.swift */; };
 		C4E5E3A2219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */; };
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
+		C4FC57EE21B1DE430073016E /* DriverListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */; };
+		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
+		C4FC581021B8119A0073016E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FC580F21B8119A0073016E /* Images.xcassets */; };
+		DC073A9621B77C21007B7491 /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */; };
+		DC073A9821B7852C007B7491 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9721B7852B007B7491 /* Driver.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
-		DCA879C6219FD0AE00C1F473 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */; };
-		DCA879C8219FD0D700C1F473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C7219FD0D700C1F473 /* Main.storyboard */; };
+		DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */; };
+		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
+		DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */; };
+		DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */; };
+		DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */; };
+		DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */; };
+		DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */; };
+		DCDCDD2721B71E2A000A8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDCDD2621B71E2A000A8F7B /* Main.storyboard */; };
 		E6CD0A75594680D70C44D610 /* Pods_final_project_mobile_wuwenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +71,21 @@
 		C4E5E3A1219A5D34005CD72D /* final_project_mobile_wuwenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = final_project_mobile_wuwenUITests.swift; sourceTree = "<group>"; };
 		C4E5E3A3219A5D34005CD72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListTableViewController.swift; sourceTree = "<group>"; };
+		C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoPageViewController.swift; sourceTree = "<group>"; };
+		C4FC580F21B8119A0073016E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
+		DC073A9721B7852B007B7491 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPageViewController.swift; path = ../../../MainPageViewController.swift; sourceTree = "<group>"; };
-		DCA879C7219FD0D700C1F473 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
+		DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRidePageViewController.swift; sourceTree = "<group>"; };
+		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
+		DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
+		DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RODViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDrivePageViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDestViewController.swift; sourceTree = "<group>"; };
+		DCDCDD2621B71E2A000A8F7B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAE8037E50FBF5C1AE8E2696 /* Pods_final_project_mobile_wuwenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,15 +165,26 @@
 		C4E5E380219A5D32005CD72D /* final_project_mobile_wuwen */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCDD2621B71E2A000A8F7B /* Main.storyboard */,
 				C4E5E381219A5D32005CD72D /* AppDelegate.swift */,
-				DCA879C5219FD0AE00C1F473 /* MainPageViewController.swift */,
+				DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */,
+				DCDCDD2221B700FA000A8F7B /* MainDrivePageViewController.swift */,
+				DCDCDD1821B6F4E6000A8F7B /* SearchPlaceViewController.swift */,
+				DCDCDD2421B70EF7000A8F7B /* SearchDestViewController.swift */,
 				C4E5E383219A5D32005CD72D /* ViewController.swift */,
 				C4E5E38A219A5D33005CD72D /* LaunchScreen.storyboard */,
-				DCA879C7219FD0D700C1F473 /* Main.storyboard */,
 				DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */,
 				C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */,
+				DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */,
+				DCDCDD2021B6FFA6000A8F7B /* RODViewController.swift */,
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
+				DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
+				DC073A9721B7852B007B7491 /* Driver.swift */,
+				DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */,
+				C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */,
+				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
+				C4FC580F21B8119A0073016E /* Images.xcassets */,
 			);
 			path = final_project_mobile_wuwen;
 			sourceTree = "<group>";
@@ -186,6 +219,7 @@
 				C4E5E37B219A5D32005CD72D /* Frameworks */,
 				C4E5E37C219A5D32005CD72D /* Resources */,
 				82CE0483EA3045EB4B2FDE4F /* [CP] Embed Pods Frameworks */,
+				6E527E8C2F35D68885497B79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,7 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA879C8219FD0D700C1F473 /* Main.storyboard in Resources */,
+				DCDCDD2721B71E2A000A8F7B /* Main.storyboard in Resources */,
+				C4FC581021B8119A0073016E /* Images.xcassets in Resources */,
 				C4E5E38C219A5D33005CD72D /* LaunchScreen.storyboard in Resources */,
 				DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */,
 			);
@@ -371,6 +406,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E527E8C2F35D68885497B79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-final_project_mobile_wuwen/Pods-final_project_mobile_wuwen-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-final_project_mobile_wuwen/Pods-final_project_mobile_wuwen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		82CE0483EA3045EB4B2FDE4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +441,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-final_project_mobile_wuwen/Pods-final_project_mobile_wuwen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -390,6 +450,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,10 +465,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */,
+				DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */,
+				DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */,
+				DC073A9821B7852C007B7491 /* Driver.swift in Sources */,
+				DC073A9621B77C21007B7491 /* DriverTableViewCell.swift in Sources */,
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
+				DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */,
+				C4FC57EE21B1DE430073016E /* DriverListTableViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
+				DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
-				DCA879C6219FD0AE00C1F473 /* MainPageViewController.swift in Sources */,
+				DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */,
+				C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */,
+				DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */,
 				C4E5E382219A5D32005CD72D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +647,7 @@
 			baseConfigurationReference = A5421A4C0798798C464A2DE3 /* Pods-final_project_mobile_wuwen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KNYY79L2;
 				INFOPLIST_FILE = final_project_mobile_wuwen/Info.plist;
@@ -596,6 +668,7 @@
 			baseConfigurationReference = 88E48A2E519B3935D36C2C74 /* Pods-final_project_mobile_wuwen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6KNYY79L2;
 				INFOPLIST_FILE = final_project_mobile_wuwen/Info.plist;

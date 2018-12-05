@@ -5,13 +5,13 @@
 //  Created by Justine Wen on 11/14/18.
 //  Copyright © 2018 final-wuwen. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-
-    @IBOutlet weak var UVAEmailTextField: UITextField!
+    var computingID:String?
+    var password:String?
+    @IBOutlet weak var ComputingIDTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordReentryTextField: UITextField!
     override func viewDidLoad() {
@@ -19,8 +19,8 @@ class SignUpViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.title = "Sign Up"
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        //        tableView.delegate = self
+        //        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -30,32 +30,48 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender:UIButton){
-        if UVAEmailTextField.text != "" {
-            if(passwordTextField.text == passwordReentryTextField.text){
-                if let computingID = UVAEmailTextField.text, let pass = passwordTextField.text{
-                    //Register the user with Firebase
-                    print("hello what the heck is happeningnksdjnglkjnglkjfngkljdfng")
+        if ComputingIDTextField.text != "" {
+            if(passwordTextField.text!.count >= 8){
+                if(passwordTextField.text == passwordReentryTextField.text){
+                    if let computingID = ComputingIDTextField.text, let pass = passwordTextField.text{
+                        //Register the user with Firebase
+                        print("hello what the heck is happeningnksdjnglkjnglkjfngkljdfng")
                         Auth.auth().createUser(withEmail: computingID + "@virginia.edu", password: pass, completion:  { (user,error) in
-                        //Check that user isn't nil
-                        Auth.auth().currentUser?.sendEmailVerification { (error) in
-                            if let error = error
-                            {print("Error when sending Email verification is \(error)")}
-                        }
-                        if let u = user{
-
-                            //User is found, go to the next page you want the user to go to
-                            self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
-                        }
-                        else{
-                            //Error:check error and show message
-                        }
-                    })
+                            //Check that user isn't nil
+                            Auth.auth().currentUser?.sendEmailVerification { (error) in
+                                if let error = error
+                                {print("Error when sending Email verification is \(error)")}
+                            }
+                            if let u = user{
+                                if (Auth.auth().currentUser?.isEmailVerified)!{
+                                    //User is found, go to the next page you want the user to go to
+                                    self.performSegue(withIdentifier: "SignUpPagetoPersonalInfoSegue", sender: self)
+                                }
+                                else{
+                                    self.computingID = self.ComputingIDTextField.text
+                                    self.password = self.passwordTextField.text
+                                    self.performSegue(withIdentifier: "VerifyEmailSegue", sender: self)
+                                }
+                            }
+                            else{
+                                //Error:check error and show message
+                            }
+                        })
+                    }
+                }
+                else{
+                    //Error message that your passwords do not match
+                    print("hello what the heck is happening")
+                    let alert = UIAlertController(title: "Password Does Not Match", message: "Your passwords do not match! Please make sure they match and try again.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    
+                    self.present(alert, animated: true)
                 }
             }
+                //password needs to be longer than 8 or else error
             else{
-                //Error message that your passwords do not match
-                print("hello what the heck is happening")
-                let alert = UIAlertController(title: "Password Does Not Match", message: "Your passwords do not match! Please make sure they match and try again.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Password Length", message: "Please create a password that is longer than 8 characters.", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 
@@ -73,4 +89,3 @@ class SignUpViewController: UIViewController {
     }
     
 }
-
