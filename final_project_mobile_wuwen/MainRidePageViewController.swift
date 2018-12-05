@@ -164,7 +164,7 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
                     self.present(alert, animated: true)
                 }
                 else{
-                    ref.child("riders").child(strDateID).child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
+                    ref.child("riders").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                         if error == nil {
                             //                    self.performSegue(withIdentifier: "MainPageSegue", sender: self)
                             

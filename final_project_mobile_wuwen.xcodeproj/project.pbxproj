@@ -18,6 +18,8 @@
 		C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E3C7219C96FB005CD72D /* SignUpViewController.swift */; };
 		C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57ED21B1DE430073016E /* DriverListViewController.swift */; };
 		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
+		DC073A9621B77C21007B7491 /* DriverListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9521B77C21007B7491 /* DriverListTableViewCell.swift */; };
+		DC073A9821B7852C007B7491 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9721B7852B007B7491 /* Driver.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
 		DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */; };
 		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
@@ -71,6 +73,8 @@
 		C4FC57ED21B1DE430073016E /* DriverListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListViewController.swift; sourceTree = "<group>"; };
 		C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInfoPageViewController.swift; sourceTree = "<group>"; };
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC073A9521B77C21007B7491 /* DriverListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListTableViewCell.swift; sourceTree = "<group>"; };
+		DC073A9721B7852B007B7491 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRidePageViewController.swift; sourceTree = "<group>"; };
 		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				C452A4C8219E95A900025C5A /* PersonalInfoViewController.swift */,
 				DCDCDD1A21B6F4F0000A8F7B /* LocationManager.swift */,
 				C4E5E38D219A5D33005CD72D /* Info.plist */,
+				DC073A9721B7852B007B7491 /* Driver.swift */,
+				DC073A9521B77C21007B7491 /* DriverListTableViewCell.swift */,
 				C4FC57ED21B1DE430073016E /* DriverListViewController.swift */,
 				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
 			);
@@ -458,6 +464,8 @@
 				DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */,
 				DCDCDD2321B700FA000A8F7B /* MainDrivePageViewController.swift in Sources */,
 				DCDCDD2521B70EF7000A8F7B /* SearchDestViewController.swift in Sources */,
+				DC073A9821B7852C007B7491 /* Driver.swift in Sources */,
+				DC073A9621B77C21007B7491 /* DriverListTableViewCell.swift in Sources */,
 				C4E5E384219A5D32005CD72D /* ViewController.swift in Sources */,
 				DCDCDD1B21B6F4F1000A8F7B /* LocationManager.swift in Sources */,
 				C4FC57EE21B1DE430073016E /* DriverListViewController.swift in Sources */,
