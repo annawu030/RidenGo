@@ -17,7 +17,10 @@ class DriverTableViewCell: UITableViewCell {
     @IBOutlet weak var driverNameLabel: UILabel!
     //    @IBOutlet weak var profileImageView: UIImageView!
 
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 //    var driverName: String
 //    var phone: String
 //    var profile: String

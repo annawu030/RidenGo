@@ -20,6 +20,7 @@
 		C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */; };
 		DC073A9621B77C21007B7491 /* DriverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */; };
 		DC073A9821B7852C007B7491 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9721B7852B007B7491 /* Driver.swift */; };
+		DC073A9A21B7D12F007B7491 /* RideToDriveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC073A9921B7D12F007B7491 /* RideToDriveListViewController.swift */; };
 		DCA879C4219FC33300C1F473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */; };
 		DCA879CA21ACD86E00C1F473 /* MainRidePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */; };
 		DCA879CE21ACF2F600C1F473 /* VerifyEmailViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */; };
@@ -75,6 +76,7 @@
 		C86F9B0AAB99DA14AB7EB1C6 /* Pods_final_project_mobile_wuwenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_mobile_wuwenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableViewCell.swift; sourceTree = "<group>"; };
 		DC073A9721B7852B007B7491 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		DC073A9921B7D12F007B7491 /* RideToDriveListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideToDriveListViewController.swift; sourceTree = "<group>"; };
 		DCA879C3219FC33300C1F473 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA879C921ACD86E00C1F473 /* MainRidePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRidePageViewController.swift; sourceTree = "<group>"; };
 		DCA879CD21ACF2F600C1F473 /* VerifyEmailViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewControlller.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				DC073A9521B77C21007B7491 /* DriverTableViewCell.swift */,
 				C4FC57ED21B1DE430073016E /* DriverListTableViewController.swift */,
 				C4FC57EF21B1DE560073016E /* DriverInfoPageViewController.swift */,
+				DC073A9921B7D12F007B7491 /* RideToDriveListViewController.swift */,
 			);
 			path = final_project_mobile_wuwen;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				C4FC57EE21B1DE430073016E /* DriverListTableViewController.swift in Sources */,
 				C452A4C9219E95A900025C5A /* PersonalInfoViewController.swift in Sources */,
 				DCDCDD2121B6FFA7000A8F7B /* RODViewController.swift in Sources */,
+				DC073A9A21B7D12F007B7491 /* RideToDriveListViewController.swift in Sources */,
 				C4E5E3C8219C96FB005CD72D /* SignUpViewController.swift in Sources */,
 				DCDCDD1921B6F4E6000A8F7B /* SearchPlaceViewController.swift in Sources */,
 				C4FC57F021B1DE560073016E /* DriverInfoPageViewController.swift in Sources */,

@@ -23,6 +23,8 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
     var destLng: Double?
     @IBOutlet var destName: UITextField!
     
+    var riderDate:String?
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapDestView: MKMapView!
     
@@ -130,6 +132,7 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
         dateFormatter2.dateFormat = "yyy:MM:dd"
         dateFormatter2.timeZone = timeZone
         let strDateID = dateFormatter2.string(from: date)
+        riderDate = strDateID
         print (strDateID)
         //        let short = strDate.index(strDate.endIndex, offsetBy: -9)
         //        print (strDate[short])
@@ -167,7 +170,7 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
                 else{
                     ref.child("riders").child(user.uid).setValue(userObject, withCompletionBlock: { error, ref in
                         if error == nil {
-                            self.performSegue(withIdentifier: "DriverListSegue", sender: self)
+                            
                         } else {
                             // Handle the error
                             
@@ -175,11 +178,26 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
                     })
                     
                 }
+                
             }) { (error) in
                 print(error.localizedDescription)
             }
             
         }
         //        performSegue(withIdentifier: , sender: self)
+        self.performSegue(withIdentifier: "DriverListSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "DriverListSegue"){
+            let destination = segue.destination as! DriverListTableViewController
+            let riderLatSender = destLat
+            destination.riderLat = riderLatSender
+            let riderLngSender = destLng
+            destination.riderLng = riderLngSender
+            let riderDateSender = riderDate
+            destination.riderDate = riderDateSender
+        }
     }
 }

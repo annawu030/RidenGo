@@ -12,9 +12,9 @@ import CoreLocation
 
 class DriverListTableViewController: UITableViewController{
     var refDrivers: DatabaseReference!
-    var riderDate: String?
-    var riderLat: Double?
-    var riderLng: Double?
+    var riderDate: String! = ""
+    var riderLat: Double! = 0.0
+    var riderLng: Double! = 0.0
     var driverList = [Driver]()
 //    var indexOfEdit: Int = 0
     @IBOutlet weak var tableViewDrivers: UITableView!
@@ -24,34 +24,44 @@ class DriverListTableViewController: UITableViewController{
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = true
-        self.driverList = Driver.sortList(list: self.driverList)
+//        self.driverList = Driver.sortList(list: self.driverList)
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
-        if let user = user {
-            ref.child("riders").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                // Get user value
-                let value = snapshot.value as? NSDictionary
-                self.riderDate = value?["date departure"] as? String ?? ""
-                print(self.riderDate)
-                let rLat = value?["dest lat"] as? String ?? ""
-                let rLng = value?["dest lng"] as? String ?? ""
-                self.riderLat = Double(rLat)
-                self.riderLng = Double(rLng)
-            }) { (error) in
-                print(error.localizedDescription)
-            }
-            
-        }
-       // FirebaseApp.configure()
-        refDrivers = Database.database().reference().child("drivers").child(self.riderDate!);
-        refDrivers.observe(DataEventType.value, with: { (snapshot) in
-            
+//        print("LOOOOOK ATTT MEEEE")
+//        if let user = user {
+//            print("I AM IN UUUUUUUUUSER")
+//            print(user.uid)
+//            ref.child("riders").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+//                // Get user value
+//                let value = snapshot.value as? NSDictionary
+//                let rDate = value?["date departure"] as? String ?? ""
+//                print(rDate)
+//                let rLat = value?["dest lat"] as? Double ?? 0.0
+//                let rLng = value?["dest lng"] as? Double ?? 0.0
+//                self.riderLat = rLat
+//                self.riderLng = rLng
+//                self.riderDate = rDate
+////                print(self.riderDate!)
+////                print(rLat)
+////                print(rLng)
+////                print(self.riderLng!)
+//            }) { (error) in
+//                print(error.localizedDescription)
+//            }
+//            //            print(self.riderDate)
+//        }
+        print(self.riderLat)
+        print(self.riderLng)
+        print(self.riderDate)
+        
+        ref.child("drivers").child(self.riderDate).observe(DataEventType.value, with: { (snapshot) in
+
             //if the reference have some values
             if snapshot.childrenCount > 0 {
-                
+
                 //clearing the list
                 self.driverList.removeAll()
-                
+
                 //iterating through all the values
                 for drivers in snapshot.children.allObjects as! [DataSnapshot] {
                     //getting values
@@ -63,24 +73,28 @@ class DriverListTableViewController: UITableViewController{
                     let destLat = driverObject?["dest lat"]
                     let destLng = driverObject?["dest lng"]
                     let date = driverObject?["date departure"]
-                    
+
                     let coordinateRider = CLLocation(latitude: self.riderLat!, longitude: self.riderLng!)
                     let coordinateDriver = CLLocation(latitude: destLat as! CLLocationDegrees, longitude: destLng as! CLLocationDegrees)
                     let distDiff = coordinateDriver.distance(from: coordinateRider)
-//                    let distDiff = driverObject?["dest lng"]
-                    
-                    
+                    //                    let distDiff = driverObject?["dest lng"]
+
+
                     //creating artist object with model and fetched values
                     let driver = Driver(driverName: driverName as! String, phone: phone as! String, profile: profile as! String, destName: destName as! String, destLat: destLat as! Double, destLng: destLng as! Double, date: date as! String, distDiff: distDiff )
-                    
+                    print(driver)
+
                     //appending it to list
                     self.driverList.append(driver)
                 }
-                
+
                 //reloading the tableview
-                self.tableViewDrivers.reloadData()
+                self.tableView.reloadData()
             }
         })
+
+       // FirebaseApp.configure()
+        
         // Do any additional setup after loading the view.
     }
     
