@@ -50,6 +50,8 @@ class MainRidePageViewController: UIViewController, UIPickerViewDelegate, UIPick
         let date = Date()
         let calendar = Calendar.current
         dateField.minimumDate = date
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
